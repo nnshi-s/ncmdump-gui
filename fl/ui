@@ -1,0 +1,45 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0307
+header_name {.h}
+code_name {.cxx}
+class user_interface {open
+} {
+  Function {user_interface()} {open
+  } {
+    Fl_Window {} {
+      label {ncm converter} open
+      xywh {876 503 410 480} type Single color 55 visible
+    } {
+      Fl_Input input_path_ {
+        label {Path:}
+        xywh {47 15 301 28} box BORDER_BOX color 55 when 0
+      }
+      Fl_Button btn_sel_path_ {
+        label {@fileopen}
+        xywh {353 15 43 28} box BORDER_BOX color 55 labeltype SHADOW_LABEL
+      }
+      Fl_Check_Button check_skip_ {
+        label { Skip converted}
+        xywh {12 52 125 28} down_box BORDER_BOX color 55 selection_color 32 when 1
+      }
+      Fl_Check_Button check_delete_ {
+        label { Delete original ncm}
+        xywh {141 52 156 28} down_box BORDER_BOX color 55 selection_color 32 when 1
+      }
+      Fl_Button btn_stop_ {
+        label {@square}
+        xywh {300 56 41 22} box BORDER_BOX color 55
+      }
+      Fl_Button btn_go_ {
+        label {@refresh}
+        xywh {354 56 41 22} box BORDER_BOX color 55
+      }
+      Fl_Progress progress_ {
+        xywh {10 87 391 25} box BORDER_BOX color 55 selection_color 32 when 0
+      }
+      Fl_Text_Display text_disp_log_ {
+        xywh {10 121 392 351} box BORDER_BOX color 55 when 0
+      }
+    }
+  }
+}
